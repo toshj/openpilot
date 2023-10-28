@@ -317,22 +317,24 @@ FW_VERSIONS = {
       b'\xa2 !`\000',
       b'\xf1\x00\xb2\x06\x04',
       b'\xa2  `\x00',
-      b'\xa2 !3\x00',
+      b'\xa2 !3\x00', # Pre-exists, Impreza 2023
     ],
     (Ecu.eps, 0x746, None): [
-      b'\x9a\xc0\000\000',
+      b'\x9a\xc0\x00\x00',
       b'\n\xc0\004\000',
       b'\x9a\xc0\x04\x00',
       b'\n\xc0\x04\x01',
+      b'\x9a\xc0\x00\x01', # Impreza 2023
     ],
     (Ecu.fwdCamera, 0x787, None): [
       b'\000\000eb\037@ \"',
       b'\x00\x00e\x8f\x1f@ )',
+      b'\x00\x00eb\x00\x00\x00\x00',
       b'\x00\x00eq\x1f@ "',
       b'\x00\x00eq\x00\x00\x00\x00',
       b'\x00\x00e\x8f\x00\x00\x00\x00',
-      b'\x00\x00e\x92\x00\x00\x00\x00',
       b'\x00\x00e\xa4\x00\x00\x00\x00',
+      b'\x00\x00e\xa4\x1f@ (', # Impreza 2023
     ],
     (Ecu.engine, 0x7e0, None): [
       b'\xca!ap\a',
@@ -340,28 +342,31 @@ FW_VERSIONS = {
       b'\xca!`0\a',
       b'\xcc\"f0\a',
       b'\xcc!fp\a',
-      b'\xcc!`p\x07',
+      b'\xca!a0\x07',
       b'\xca!f@\x07',
       b'\xca!fp\x07',
       b'\xf3"f@\x07',
+      b'\xe6!`@\x07',
       b'\xe6!fp\x07',
       b'\xf3"fp\x07',
-      b'\xe6"f0\x07',
       b'\xe6"fp\x07',
-      b'\xe6!`@\x07',
+      b'\xf3!`p\x07',  # Impreza 2023
     ],
     (Ecu.transmission, 0x7e1, None): [
       b'\xe6\xf5\004\000\000',
       b'\xe6\xf5$\000\000',
-      b'\xe7\xf5\x04\x00\x00',
       b'\xe7\xf6B0\000',
       b'\xe7\xf5D0\000',
+      b'\xf1\x00\xa4\x10@', # Pre-exists, Impreza 2023
       b'\xf1\x00\xd7\x10@',
       b'\xe6\xf5D0\x00',
       b'\xe9\xf6F0\x00',
-      b'\xe9\xf5B0\x00',
-      b'\xe9\xf6B0\x00',
-      b'\xe9\xf5"\x00\x00',
+      b'\xe9\xf5\x02\x00\x00',
+      b'\xe9\xf5&\x00\x00',  # Impreza 2023
+      b'\xf1\x82\xe9\xf5&\x00\x00', # Impreza 2023 
+    ],
+    (Ecu.fwdRadar, 0x7d0, None): [
+      b'\xf1\x00\x00\x00\x02', # Impreza 2023
     ],
   },
   CAR.CROSSTREK_HYBRID: {
